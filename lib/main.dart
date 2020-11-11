@@ -47,13 +47,12 @@ class MyHomePage extends StatelessWidget {
             children: transaction.map((tx) {
               return Card(
                 child: Row(
-                  //mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
                       margin:
                           EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                       child: Text(
-                        tx.amount.toString(),
+                        '\$${tx.amount}',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,

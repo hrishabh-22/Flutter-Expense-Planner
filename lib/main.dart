@@ -9,7 +9,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.purple, accentColor: Colors.amber),
+      theme: ThemeData(
+          primarySwatch: Colors.purple,
+          accentColor: Colors.amber,
+          fontFamily: 'Quicksand',
+          textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18)),
+          appBarTheme: AppBarTheme(
+              textTheme: ThemeData.light().textTheme.copyWith(
+                      headline6: TextStyle(
+                    fontFamily: 'OpenSans',
+                    fontSize: 20,
+                  )))),
       title: 'Personal Expenses',
       debugShowCheckedModeBanner: false,
       home: MyHomePage(),
@@ -62,7 +76,9 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.add),
               onPressed: () => _startAddNewTransaction(context))
         ],
-        title: Text('Personal Expenses'),
+        title: Text(
+          'Personal Expenses',
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(

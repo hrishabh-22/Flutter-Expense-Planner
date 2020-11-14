@@ -9,7 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
+      theme: ThemeData(primarySwatch: Colors.purple, accentColor: Colors.amber),
+      title: 'Personal Expenses',
       debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
@@ -61,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.add),
               onPressed: () => _startAddNewTransaction(context))
         ],
-        title: Text('Flutter App'),
+        title: Text('Personal Expenses'),
       ),
       body: SingleChildScrollView(
         child: Column(
